@@ -5,7 +5,7 @@ import { Redirect, Route } from 'react-router';
 export const PrivateRoute = ({  isAuthenticated, component: Component,  ...rest }) => {
     
     localStorage.setItem("last_path",rest.location.pathname);
-    console.log(localStorage.getItem("last_path"));
+    
     return ( 
         <Route {...rest}
             component={ (props)=> (
